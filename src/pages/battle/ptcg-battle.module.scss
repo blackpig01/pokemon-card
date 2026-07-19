@@ -1,0 +1,402 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #FFFFFF;
+}
+
+.weatherBanner {
+  background-color: rgba(255, 217, 61, 0.2);
+  padding: 8px;
+  text-align: center;
+}
+
+.weatherText {
+  color: #FFD93D;
+  font-size: 14px;
+}
+
+.opponentArea {
+  padding: 10px;
+  border-bottom: 2px solid #FFD93D;
+}
+
+.opponentInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.opponentName {
+  color: #FF6B6B;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.opponentPrize {
+  color: #86909C;
+  font-size: 12px;
+}
+
+.opponentDeck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: 80px;
+  background-color: #2D3436;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.deckCount {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.deckLabel {
+  color: #86909C;
+  font-size: 10px;
+}
+
+.deckAction {
+  color: #FFD93D;
+  font-size: 8px;
+  margin-top: 2px;
+}
+
+.opponentPrizeCards {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.prizeCard {
+  width: 40px;
+  height: 54px;
+  background-color: #6C5CE7;
+  border-radius: 6px;
+  border: 2px solid #A29BFE;
+}
+
+.opponentActiveArea {
+  margin: 10px 0;
+}
+
+.areaLabel {
+  color: #86909C;
+  font-size: 12px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.fieldPokemon {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.fieldCard {
+  width: 80px;
+  height: 106px;
+  border-radius: 8px;
+}
+
+.pokemonInfo {
+  flex: 1;
+}
+
+.pokemonName {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+}
+
+.hpBar {
+  height: 8px;
+  background-color: #2D3436;
+  border-radius: 4px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.hpFill {
+  height: 100%;
+  background: linear-gradient(90deg, #00B42A 0%, #00E676 100%);
+  transition: width 0.3s;
+}
+
+.hpText {
+  color: #86909C;
+  font-size: 12px;
+  display: block;
+}
+
+.energyIcons {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.energyIcon {
+  font-size: 16px;
+}
+
+.statusIcon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 24px;
+}
+
+.opponentBench {
+  margin: 10px 0;
+}
+
+.benchSlots {
+  display: flex;
+  gap: 5px;
+}
+
+.benchSlot {
+  width: 60px;
+  height: 80px;
+  position: relative;
+}
+
+.benchCard {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.benchHP {
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+}
+
+.emptySlot {
+  width: 60px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  border: 2px dashed #86909C;
+}
+
+.opponentDiscard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: 80px;
+  background-color: #2D3436;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.discardCount {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.discardLabel {
+  color: #86909C;
+  font-size: 10px;
+}
+
+.battleField {
+  padding: 15px;
+  text-align: center;
+}
+
+.turnInfo {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.turnText {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.phaseText {
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  
+  &.draw { background-color: #165DFF; color: #FFFFFF; }
+  &.main { background-color: #00B42A; color: #FFFFFF; }
+  &.attack { background-color: #F53F3F; color: #FFFFFF; }
+  &.end { background-color: #86909C; color: #FFFFFF; }
+}
+
+.playerArea {
+  flex: 1;
+  padding: 10px;
+}
+
+.playerInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.playerName {
+  color: #FFD93D;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.playerPrize {
+  color: #86909C;
+  font-size: 12px;
+}
+
+.playerDeck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: 80px;
+  background-color: #FFD93D;
+  border-radius: 8px;
+  padding: 5px;
+  
+  .deckCount, .deckLabel, .deckAction {
+    color: #1A1A2E;
+  }
+}
+
+.playerPrizeCards {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.playerActiveArea {
+  margin: 10px 0;
+}
+
+.playerBench {
+  margin: 10px 0;
+}
+
+.benchScroll {
+  white-space: nowrap;
+}
+
+.playerDiscard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: 80px;
+  background-color: #FF6B6B;
+  border-radius: 8px;
+  padding: 5px;
+  
+  .discardCount, .discardLabel {
+    color: #FFFFFF;
+  }
+}
+
+.handArea {
+  margin: 10px 0;
+}
+
+.handScroll {
+  white-space: nowrap;
+}
+
+.handCards {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.handCard {
+  width: 70px;
+  height: 94px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+  
+  &.selected {
+    border-color: #FFD93D;
+    transform: scale(1.1);
+  }
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+}
+
+.cardTypes {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  gap: 2px;
+}
+
+.typeIcon {
+  font-size: 14px;
+}
+
+.cardHP {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.actionBtn {
+  flex: 1;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFD93D;
+  color: #1A1A2E;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 22px;
+}

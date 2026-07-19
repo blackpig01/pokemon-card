@@ -1,0 +1,247 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-card;
+}
+
+.header {
+  margin-bottom: $spacing-md;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.postBtn {
+  padding: 8rpx 20rpx;
+  font-size: 24rpx;
+  font-weight: $font-weight-medium;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #FF6B6B 0%, #F53F3F 100%);
+  border-radius: $radius-button;
+}
+
+// 标签筛选
+.tagFilter {
+  display: flex;
+  white-space: nowrap;
+  gap: $spacing-sm;
+}
+
+.filterTag {
+  display: inline-block;
+  padding: 8rpx 16rpx;
+  font-size: 22rpx;
+  color: $color-text-secondary;
+  background: $color-bg-hover;
+  border-radius: $radius-button;
+  white-space: nowrap;
+
+  &.active {
+    color: #FFFFFF;
+    font-weight: $font-weight-medium;
+  }
+}
+
+// 发布区域
+.postArea {
+  padding: $spacing-md;
+  background: $color-bg-hover;
+  border-radius: $radius-md;
+  margin-bottom: $spacing-md;
+}
+
+.postInput {
+  width: 100%;
+  min-height: 160rpx;
+  padding: $spacing-md;
+  font-size: 28rpx;
+  color: $color-text-primary;
+  background: #FFFFFF;
+  border-radius: $radius-md;
+  text-align: left;
+}
+
+.tagSelect {
+  margin-top: $spacing-md;
+
+  .tagLabel {
+    font-size: 24rpx;
+    color: $color-text-secondary;
+    margin-bottom: $spacing-sm;
+    display: block;
+  }
+}
+
+.tagList {
+  display: flex;
+  white-space: nowrap;
+  gap: $spacing-sm;
+}
+
+.tagItem {
+  display: inline-block;
+  padding: 8rpx 16rpx;
+  font-size: 22rpx;
+  color: $color-text-secondary;
+  background: #FFFFFF;
+  border: 1rpx solid $color-divider;
+  border-radius: $radius-button;
+  white-space: nowrap;
+
+  &.selected {
+    color: #FFFFFF;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.postActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $spacing-md;
+
+  .charCount {
+    font-size: 22rpx;
+    color: $color-text-tertiary;
+  }
+}
+
+.submitBtn {
+  padding: 12rpx 32rpx;
+  font-size: 26rpx;
+  font-weight: $font-weight-semibold;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #FF6B6B 0%, #F53F3F 100%);
+  border-radius: $radius-button;
+}
+
+// 评论列表
+.commentList {
+  .loading,
+  .empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $spacing-xl 0;
+    font-size: 26rpx;
+    color: $color-text-tertiary;
+  }
+}
+
+.commentItem {
+  padding: $spacing-md 0;
+  border-bottom: 1rpx solid $color-divider;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &.topComment {
+    background: rgba(255, 217, 61, 0.1);
+    margin: 0 (-$spacing-md);
+    padding: $spacing-md;
+    border-radius: $radius-md;
+    border-bottom: none;
+  }
+}
+
+.topBadge {
+  display: inline-block;
+  padding: 4rpx 12rpx;
+  font-size: 20rpx;
+  font-weight: $font-weight-bold;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #FFD93D 0%, #FF9F1C 100%);
+  border-radius: $radius-xs;
+  margin-bottom: $spacing-sm;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-sm;
+}
+
+.avatar {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: $radius-round;
+  background: linear-gradient(135deg, #FFF9E6, #FFE4E1);
+}
+
+.userDetail {
+  margin-left: $spacing-md;
+
+  .userName {
+    font-size: 28rpx;
+    font-weight: $font-weight-medium;
+    color: $color-text-primary;
+  }
+
+  .commentTime {
+    font-size: 22rpx;
+    color: $color-text-tertiary;
+    margin-top: 4rpx;
+  }
+}
+
+.commentContent {
+  .commentTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rpx;
+    margin-bottom: $spacing-sm;
+  }
+
+  .commentTag {
+    padding: 4rpx 12rpx;
+    font-size: 20rpx;
+    border-radius: $radius-xs;
+  }
+
+  .contentText {
+    font-size: 28rpx;
+    color: $color-text-primary;
+    line-height: 1.6;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: $spacing-lg;
+  margin-top: $spacing-md;
+}
+
+.actionItem {
+  display: flex;
+  align-items: center;
+  gap: 6rpx;
+  font-size: 26rpx;
+  color: $color-text-tertiary;
+
+  &.liked {
+    color: $color-price-up;
+  }
+
+  &.disliked {
+    color: $color-price-down;
+  }
+
+  .actionCount {
+    font-size: 22rpx;
+  }
+}

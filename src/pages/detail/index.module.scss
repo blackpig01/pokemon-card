@@ -1,0 +1,219 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: 140rpx;
+}
+
+.cardImage {
+  width: 100%;
+  height: 600rpx;
+  background: linear-gradient(135deg, #FFF9E6, #FFE4E1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  padding: $spacing-lg $page-padding;
+  margin-top: -$spacing-xl;
+  background: $color-bg-card;
+  border-radius: $radius-xl $radius-xl 0 0;
+  position: relative;
+  box-shadow: $shadow-card;
+}
+
+.header {
+  margin-bottom: $spacing-lg;
+
+  .name {
+    font-size: 40rpx;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+  }
+
+  .series {
+    font-size: 28rpx;
+    color: $color-text-tertiary;
+    margin-top: 8rpx;
+  }
+
+  .metaTags {
+    display: flex;
+    gap: $spacing-sm;
+    margin-top: $spacing-sm;
+
+    .tag {
+      font-size: 22rpx;
+      padding: 4rpx 12rpx;
+      background: $color-bg-hover;
+      border-radius: $radius-xs;
+      color: $color-text-tertiary;
+    }
+  }
+}
+
+.priceSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: $spacing-md;
+  background: linear-gradient(135deg, rgba(255, 217, 61, 0.1), rgba(255, 159, 28, 0.1));
+  border-radius: $radius-lg;
+  margin-bottom: $spacing-lg;
+}
+
+.price {
+  .current {
+    font-size: 48rpx;
+    font-weight: $font-weight-bold;
+    color: $color-price-down;
+  }
+
+  .original {
+    font-size: 28rpx;
+    color: $color-text-tertiary;
+    text-decoration: line-through;
+    margin-left: $spacing-sm;
+  }
+}
+
+.change {
+  font-size: 28rpx;
+  padding: 8rpx 16rpx;
+  border-radius: $radius-button;
+
+  &.up {
+    background: rgba(0, 180, 42, 0.1);
+    color: $color-price-up;
+  }
+
+  &.down {
+    background: rgba(245, 63, 63, 0.1);
+    color: $color-price-down;
+  }
+}
+
+.section {
+  margin-bottom: $spacing-lg;
+}
+
+.sectionTitle {
+  font-size: 30rpx;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-md;
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+}
+
+.transactions {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-card;
+}
+
+.txItem {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md;
+  border-bottom: 1rpx solid $color-divider;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .txGrade {
+    width: 60rpx;
+    padding: 4rpx 8rpx;
+    text-align: center;
+    font-size: 22rpx;
+    font-weight: $font-weight-medium;
+    border-radius: $radius-xs;
+    color: #fff;
+    margin-right: $spacing-md;
+
+    &.raw { background: #86909C; }
+    &.psa9 { background: #165DFF; }
+    &.psa10 { background: #00B42A; }
+    &.bgs9 { background: #FF7D00; }
+    &.bgs10 { background: #F53F3F; }
+  }
+
+  .txInfo {
+    flex: 1;
+
+    .txPrice {
+      font-size: 28rpx;
+      font-weight: $font-weight-semibold;
+      color: $color-text-primary;
+    }
+
+    .txMeta {
+      font-size: 22rpx;
+      color: $color-text-tertiary;
+      margin-top: 4rpx;
+    }
+  }
+
+  .txTime {
+    font-size: 20rpx;
+    color: $color-text-disabled;
+    text-align: right;
+  }
+}
+
+.loading {
+  @include flex-center;
+  height: 300rpx;
+
+  text {
+    font-size: 28rpx;
+    color: $color-text-tertiary;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: $spacing-md;
+  padding: $spacing-lg $page-padding;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $color-bg-card;
+  box-shadow: 0 -4rpx 20rpx rgba(0, 0, 0, 0.05);
+  z-index: 100;
+}
+
+.actionBtn {
+  flex: 1;
+  height: 88rpx;
+  @include flex-center;
+  border-radius: $radius-button;
+  font-size: 32rpx;
+  font-weight: $font-weight-semibold;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.primary {
+    background: linear-gradient(135deg, #FFD93D 0%, #FF9F1C 100%);
+    color: #1D2129;
+  }
+
+  &.secondary {
+    background: $color-bg-hover;
+    color: $color-text-primary;
+  }
+
+  &.alert {
+    background: rgba(245, 63, 63, 0.1);
+    color: $color-price-down;
+  }
+}

@@ -1,0 +1,128 @@
+.container { min-height: 100vh; background: #fff; }
+
+.navBar {
+  display: flex;
+  align-items: center;
+  padding: 50px 16px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.navBack { font-size: 20px; margin-right: 12px; }
+.navTitle { font-size: 16px; font-weight: bold; flex: 1; }
+.navFavorite { font-size: 20px; }
+
+.detailImg {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  color: white;
+}
+
+.detailInfo {
+  text-align: center;
+  padding: 12px 0;
+}
+
+.detailName { font-size: 18px; font-weight: bold; color: #1a1a2e; display: block; }
+.detailMeta { font-size: 13px; color: #999; margin-top: 4px; display: block; }
+
+.detailSection {
+  padding: 16px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.detailTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.priceRow:last-child { border: none; }
+.platformName { font-size: 14px; color: #666; }
+.platformPrice { font-size: 14px; font-weight: bold; color: #1a1a2e; }
+
+.bottomActions {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0 0;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 24px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #2979ff, #5393ff);
+  color: white;
+}
+
+.btnSecondary {
+  background: #f0f2f5;
+  color: #1a1a2e;
+}
+
+.chartPlaceholder {
+  height: 160px;
+  background: linear-gradient(180deg, #e3f2fd 0%, #fff 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2979ff;
+  font-size: 14px;
+}
+
+.chartStats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+.txRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 13px;
+}
+
+.txDate { color: #999; width: 60px; }
+.txPlatform { color: #666; flex: 1; text-align: center; }
+.txPrice { color: #1a1a2e; font-weight: bold; width: 80px; text-align: right; }
+.txCondition { color: #999; font-size: 11px; width: 50px; text-align: right; }
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.infoItem {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.infoLabel { font-size: 11px; color: #999; margin-bottom: 4px; display: block; }
+.infoValue { font-size: 14px; font-weight: bold; color: #1a1a2e; display: block; }

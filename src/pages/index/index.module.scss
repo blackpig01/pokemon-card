@@ -1,0 +1,126 @@
+.container { min-height: 100vh; background: #f0f2f5; }
+
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 50px 16px 20px;
+  color: white;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.15);
+  border-radius: 24px;
+  padding: 14px 20px;
+  margin-bottom: 16px;
+  height: 52px;
+}
+
+.searchIcon {
+  font-size: 18px;
+  color: rgba(255,255,255,0.7);
+  flex-shrink: 0;
+}
+
+.searchBar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  margin: 0 12px;
+  height: 100%;
+  line-height: 24px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.searchBar input::placeholder {
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+}
+
+.searchBar input:focus {
+  outline: none;
+}
+
+.banner {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+}
+
+.bannerTitle { font-size: 18px; font-weight: bold; display: block; }
+.bannerDesc { font-size: 13px; opacity: 0.8; margin-top: 6px; display: block; }
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a1a2e;
+  padding: 16px;
+}
+
+.gameGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 0 16px;
+  margin-bottom: 8px;
+}
+
+.gameCard {
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.gameCard .icon { font-size: 32px; margin-bottom: 8px; display: block; }
+.gameCard .name { font-size: 14px; font-weight: bold; display: block; }
+.gameCard .sub { font-size: 11px; opacity: 0.8; margin-top: 4px; display: block; }
+
+.cardListItem {
+  background: #fff;
+  margin: 0 16px 12px;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.cardRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cardImg {
+  width: 60px;
+  height: 84px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.cardInfo { flex: 1; }
+.cardName { font-size: 15px; font-weight: bold; color: #1a1a2e; display: block; }
+.cardMeta { font-size: 12px; color: #999; margin-top: 4px; display: block; }
+
+.cardPrice { text-align: right; }
+
+.priceTrend {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.trendUp { background: #e8f5e9; color: #00c853; }
+.trendDown { background: #ffebee; color: #ff1744; }
+.trendFlat { background: #f5f5f5; color: #999; }

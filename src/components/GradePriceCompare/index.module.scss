@@ -1,0 +1,220 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-card;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.hint {
+  font-size: 22rpx;
+  color: $color-text-tertiary;
+}
+
+.gradeList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.gradeItem {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md;
+  background: $color-bg-hover;
+  border-radius: $radius-md;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &.selected {
+    background: rgba(255, 217, 61, 0.15);
+    border: 2rpx solid $color-pikachu-yellow;
+  }
+}
+
+.gradeBadge {
+  width: 80rpx;
+  padding: 8rpx 12rpx;
+  text-align: center;
+  border-radius: $radius-sm;
+  font-size: 24rpx;
+  font-weight: $font-weight-semibold;
+  color: #fff;
+  margin-right: $spacing-md;
+
+  &.raw {
+    background: linear-gradient(135deg, #86909C, #6B7785);
+  }
+
+  &.psa9 {
+    background: linear-gradient(135deg, #165DFF, #0E4DCC);
+  }
+
+  &.psa10 {
+    background: linear-gradient(135deg, #00B42A, #008A19);
+  }
+
+  &.bgs9 {
+    background: linear-gradient(135deg, #FF7D00, #D96A00);
+  }
+
+  &.bgs10 {
+    background: linear-gradient(135deg, #F53F3F, #CB2C2C);
+  }
+}
+
+.gradeInfo {
+  flex: 1;
+
+  .gradeLabel {
+    font-size: 28rpx;
+    font-weight: $font-weight-medium;
+    color: $color-text-primary;
+    display: flex;
+    align-items: center;
+    gap: 8rpx;
+  }
+
+  .gradeDesc {
+    font-size: 22rpx;
+    color: $color-text-tertiary;
+    margin-top: 4rpx;
+  }
+}
+
+.gradePrice {
+  text-align: right;
+  flex-shrink: 0;
+
+  .currentPrice {
+    font-size: 32rpx;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+  }
+
+  .priceChange {
+    font-size: 22rpx;
+    margin-top: 4rpx;
+
+    &.up {
+      color: $color-price-up;
+    }
+
+    &.down {
+      color: $color-price-down;
+    }
+  }
+
+  .volume {
+    font-size: 20rpx;
+    color: $color-text-tertiary;
+    margin-top: 2rpx;
+  }
+}
+
+.priceRatio {
+  padding: $spacing-md;
+  background: linear-gradient(135deg, rgba(255, 217, 61, 0.1), rgba(255, 159, 28, 0.1));
+  border-radius: $radius-md;
+  margin-top: $spacing-md;
+
+  .ratioTitle {
+    font-size: 24rpx;
+    color: $color-text-tertiary;
+    margin-bottom: $spacing-sm;
+  }
+
+  .ratioBar {
+    display: flex;
+    height: 40rpx;
+    border-radius: $radius-xs;
+    overflow: hidden;
+    background: $color-bg-hover;
+  }
+
+  .ratioSegment {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18rpx;
+    color: #fff;
+    font-weight: $font-weight-medium;
+
+    &.raw {
+      background: #86909C;
+    }
+
+    &.psa9 {
+      background: #165DFF;
+    }
+
+    &.psa10 {
+      background: #00B42A;
+    }
+
+    &.bgs9 {
+      background: #FF7D00;
+    }
+
+    &.bgs10 {
+      background: #F53F3F;
+    }
+  }
+}
+
+.ratioLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-top: $spacing-sm;
+
+  .legendItem {
+    display: flex;
+    align-items: center;
+    gap: 6rpx;
+    font-size: 20rpx;
+    color: $color-text-tertiary;
+  }
+
+  .legendDot {
+    width: 12rpx;
+    height: 12rpx;
+    border-radius: $radius-xs;
+  }
+}
+
+.trendPreview {
+  height: 100rpx;
+  background: linear-gradient(180deg, rgba(255, 217, 61, 0.05), transparent);
+  border-radius: $radius-sm;
+  margin-top: $spacing-sm;
+  position: relative;
+  overflow: hidden;
+
+  .trendLine {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60rpx;
+  }
+}

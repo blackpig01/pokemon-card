@@ -1,0 +1,109 @@
+.container { min-height: 100vh; background: #f0f2f5; }
+
+.tradeHeader {
+  background: #fff;
+  padding: 50px 16px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.headerTitle { font-size: 20px; font-weight: bold; display: block; }
+
+.quickMatch {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  margin: 0 16px 20px;
+  border-radius: 16px;
+  padding: 24px;
+  color: white;
+  text-align: center;
+}
+
+.quickMatchH3 { font-size: 18px; margin-bottom: 8px; display: block; }
+.quickMatchP { font-size: 13px; opacity: 0.7; margin-bottom: 16px; display: block; }
+
+.btn {
+  padding: 14px;
+  border-radius: 24px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #2979ff, #5393ff);
+  color: white;
+}
+
+.battleModes { padding: 0 16px; }
+
+.modeSection { margin-bottom: 20px; }
+
+.modeTitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.modeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.modeCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  cursor: pointer;
+}
+
+.modeIcon { font-size: 28px; margin-bottom: 8px; display: block; }
+.modeName { font-size: 12px; font-weight: bold; color: #1a1a2e; display: block; }
+
+.modeTag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+.detailSection {
+  padding: 16px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.detailTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.infoItem {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.infoLabel { font-size: 11px; color: #999; margin-bottom: 4px; display: block; }
+.infoValue { font-size: 14px; font-weight: bold; color: #1a1a2e; display: block; }

@@ -1,0 +1,151 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-card;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.periodTabs {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.periodTab {
+  padding: 6rpx 16rpx;
+  font-size: 24rpx;
+  color: $color-text-tertiary;
+  background: $color-bg-hover;
+  border-radius: $radius-xs;
+  transition: all $transition-base;
+
+  &.active {
+    background: linear-gradient(135deg, $color-pikachu-yellow 0%, $color-pikachu-orange 100%);
+    color: $color-text-primary;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.chartContainer {
+  position: relative;
+  height: 400rpx;
+  background: linear-gradient(180deg, rgba(255, 217, 61, 0.05), transparent);
+  border-radius: $radius-sm;
+  overflow: hidden;
+}
+
+.chartCanvas {
+  width: 100%;
+  height: 100%;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding-top: $spacing-md;
+  border-top: 1rpx solid $color-divider;
+  margin-top: $spacing-md;
+}
+
+.statItem {
+  text-align: center;
+
+  .statLabel {
+    font-size: 22rpx;
+    color: $color-text-tertiary;
+    margin-bottom: 4rpx;
+  }
+
+  .statValue {
+    font-size: 26rpx;
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+  }
+
+  .statChange {
+    font-size: 20rpx;
+    margin-top: 2rpx;
+
+    &.up {
+      color: $color-price-up;
+    }
+
+    &.down {
+      color: $color-price-down;
+    }
+  }
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(29, 33, 41, 0.9);
+  color: #fff;
+  padding: 8rpx 12rpx;
+  border-radius: $radius-sm;
+  font-size: 22rpx;
+  pointer-events: none;
+  z-index: 10;
+  max-width: 200rpx;
+
+  .tooltipRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rpx;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .tooltipLabel {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .tooltipValue {
+      font-weight: $font-weight-medium;
+    }
+  }
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-lg;
+  padding-top: $spacing-sm;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  font-size: 22rpx;
+  color: $color-text-tertiary;
+}
+
+.legendColor {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: $radius-xs;
+
+  &.up {
+    background: $color-price-up;
+  }
+
+  &.down {
+    background: $color-price-down;
+  }
+}

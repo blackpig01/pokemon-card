@@ -1,0 +1,365 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFF9E6 0%, $color-bg-page 100%);
+  padding-bottom: 120rpx;
+}
+
+// 头部搜索
+.header {
+  padding: $spacing-lg $page-padding;
+  background: linear-gradient(135deg, #FF9F1C 0%, #FF6B6B 100%);
+
+  .title {
+    font-size: 40rpx;
+    font-weight: $font-weight-bold;
+    color: #FFFFFF;
+    margin-bottom: $spacing-md;
+  }
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: $radius-button;
+  padding: 0 $spacing-md;
+  height: 72rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.searchInput {
+  flex: 1;
+  height: 72rpx;
+  font-size: 28rpx;
+  color: $color-text-primary;
+}
+
+.searchBtn {
+  padding: 8rpx 16rpx;
+  font-size: 32rpx;
+}
+
+// 分类导航
+.categoryNav {
+  display: flex;
+  white-space: nowrap;
+  padding: $spacing-md $page-padding;
+  background: $color-bg-card;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+.categoryItem {
+  display: inline-block;
+  padding: 12rpx 24rpx;
+  margin-right: $spacing-sm;
+  font-size: 28rpx;
+  color: $color-text-secondary;
+  background: $color-bg-hover;
+  border-radius: $radius-button;
+  white-space: nowrap;
+  transition: all $transition-base;
+
+  &.active {
+    background: linear-gradient(135deg, #FFD93D 0%, #FF9F1C 100%);
+    color: #1D2129;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+// 区块
+.section {
+  padding: $spacing-lg $page-padding;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.sectionTitle {
+  font-size: 34rpx;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.moreBtn {
+  font-size: 24rpx;
+  color: $color-text-tertiary;
+  padding: 8rpx 16rpx;
+  background: $color-bg-hover;
+  border-radius: $radius-button;
+}
+
+.goodsCount {
+  font-size: 24rpx;
+  color: $color-text-tertiary;
+}
+
+// 热销榜单
+.hotList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-md;
+}
+
+.hotItem {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-card;
+  position: relative;
+
+  .hotRank {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48rpx;
+    height: 48rpx;
+    line-height: 48rpx;
+    text-align: center;
+    font-size: 28rpx;
+    font-weight: $font-weight-bold;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: $radius-sm 0 $radius-sm 0;
+    z-index: 1;
+
+    &.rank1 {
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+    }
+
+    &.rank2 {
+      background: linear-gradient(135deg, #C0C0C0, #A0A0A0);
+    }
+
+    &.rank3 {
+      background: linear-gradient(135deg, #CD7F32, #B87333);
+    }
+  }
+
+  .hotImage {
+    width: 100%;
+    height: 280rpx;
+    background: linear-gradient(135deg, #FFF9E6, #FFE4E1);
+  }
+
+  .hotInfo {
+    padding: $spacing-md;
+
+    .hotName {
+      font-size: 26rpx;
+      font-weight: $font-weight-medium;
+      color: $color-text-primary;
+      height: 65rpx;
+      line-height: 1.4;
+    }
+
+    .hotPrice {
+      font-size: 30rpx;
+      font-weight: $font-weight-bold;
+      color: $color-price-down;
+      margin-top: 8rpx;
+    }
+
+    .hotSales {
+      font-size: 22rpx;
+      color: $color-text-tertiary;
+      margin-top: 4rpx;
+    }
+  }
+}
+
+// 推荐商品
+.recommendGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-md;
+}
+
+.recommendItem {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-card;
+  position: relative;
+
+  .recommendImage {
+    width: 100%;
+    height: 300rpx;
+    background: linear-gradient(135deg, #FFF9E6, #FFE4E1);
+  }
+
+  .discountTag {
+    position: absolute;
+    top: $spacing-sm;
+    right: $spacing-sm;
+    padding: 4rpx 12rpx;
+    font-size: 20rpx;
+    font-weight: $font-weight-bold;
+    color: #FFFFFF;
+    background: $color-price-down;
+    border-radius: $radius-xs;
+  }
+
+  .recommendInfo {
+    padding: $spacing-md;
+
+    .recommendName {
+      font-size: 28rpx;
+      font-weight: $font-weight-medium;
+      color: $color-text-primary;
+      height: 70rpx;
+    }
+
+    .recommendPriceRow {
+      display: flex;
+      align-items: baseline;
+      gap: 8rpx;
+      margin-top: 8rpx;
+
+      .recommendPrice {
+        font-size: 32rpx;
+        font-weight: $font-weight-bold;
+        color: $color-price-down;
+      }
+
+      .originalPrice {
+        font-size: 22rpx;
+        color: $color-text-tertiary;
+        text-decoration: line-through;
+      }
+    }
+
+    .recommendSales {
+      font-size: 22rpx;
+      color: $color-text-tertiary;
+      margin-top: 8rpx;
+    }
+  }
+}
+
+// 商品瀑布流
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-md;
+}
+
+.productItem {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-card;
+
+  .productImageWrap {
+    position: relative;
+
+    .productImage {
+      width: 100%;
+      height: 320rpx;
+      background: linear-gradient(135deg, #FFF9E6, #FFE4E1);
+    }
+
+    .hotTag {
+      position: absolute;
+      top: $spacing-sm;
+      left: $spacing-sm;
+      padding: 4rpx 12rpx;
+      font-size: 20rpx;
+      font-weight: $font-weight-bold;
+      color: #FFFFFF;
+      background: $color-price-down;
+      border-radius: $radius-xs;
+    }
+
+    .newTag {
+      position: absolute;
+      top: $spacing-sm;
+      left: $spacing-sm;
+      padding: 4rpx 12rpx;
+      font-size: 20rpx;
+      font-weight: $font-weight-bold;
+      color: #FFFFFF;
+      background: $color-price-up;
+      border-radius: $radius-xs;
+    }
+
+    .discountBadge {
+      position: absolute;
+      bottom: $spacing-sm;
+      right: $spacing-sm;
+      padding: 4rpx 12rpx;
+      font-size: 20rpx;
+      font-weight: $font-weight-bold;
+      color: #FFFFFF;
+      background: $color-price-down;
+      border-radius: $radius-xs;
+    }
+  }
+
+  .productInfo {
+    padding: $spacing-md;
+
+    .productName {
+      font-size: 26rpx;
+      font-weight: $font-weight-medium;
+      color: $color-text-primary;
+      height: 65rpx;
+      line-height: 1.4;
+    }
+
+    .productTags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6rpx;
+      margin-top: 8rpx;
+
+      .productTag {
+        font-size: 18rpx;
+        padding: 2rpx 8rpx;
+        background: $color-bg-hover;
+        color: $color-text-tertiary;
+        border-radius: $radius-xs;
+      }
+    }
+
+    .productPriceRow {
+      display: flex;
+      align-items: baseline;
+      gap: 8rpx;
+      margin-top: $spacing-sm;
+
+      .productPrice {
+        font-size: 30rpx;
+        font-weight: $font-weight-bold;
+        color: $color-price-down;
+      }
+
+      .productOriginal {
+        font-size: 20rpx;
+        color: $color-text-tertiary;
+        text-decoration: line-through;
+      }
+    }
+
+    .productMeta {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8rpx;
+
+      .productSales {
+        font-size: 20rpx;
+        color: $color-text-tertiary;
+      }
+
+      .productRating {
+        font-size: 20rpx;
+        color: $color-text-tertiary;
+      }
+    }
+  }
+}

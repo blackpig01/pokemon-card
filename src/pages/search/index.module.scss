@@ -1,0 +1,218 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: 120rpx;
+}
+
+.searchHeader {
+  padding: $spacing-md $page-padding;
+  background: linear-gradient(135deg, #FFD93D 0%, #FF9F1C 100%);
+
+  .searchBar {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: $radius-button;
+    padding: $spacing-sm $spacing-md;
+    box-shadow: $shadow-card;
+  }
+
+  .searchIcon {
+    font-size: 32rpx;
+    margin-right: $spacing-sm;
+  }
+
+  .searchInput {
+    flex: 1;
+    height: 64rpx;
+    font-size: 28rpx;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .clearBtn {
+    padding: 8rpx;
+    font-size: 28rpx;
+    color: $color-text-tertiary;
+  }
+}
+
+// 筛选区域
+.filters {
+  padding: $spacing-md $page-padding;
+  background: $color-bg-card;
+  box-shadow: $shadow-card;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.filterRow {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-sm;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.filterChip {
+  padding: 8rpx 20rpx;
+  font-size: 24rpx;
+  color: $color-text-secondary;
+  background: $color-bg-hover;
+  border-radius: $radius-button;
+  white-space: nowrap;
+
+  &.active {
+    background: linear-gradient(135deg, #FFD93D 0%, #FF9F1C 100%);
+    color: #1D2129;
+    font-weight: $font-weight-medium;
+  }
+}
+
+// 搜索结果
+.results {
+  padding: $spacing-md $page-padding;
+}
+
+.resultItem {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  .cardImage {
+    width: 120rpx;
+    height: 150rpx;
+    border-radius: $radius-md;
+    background: linear-gradient(135deg, #FFF9E6, #FFE4E1);
+  }
+
+  .cardInfo {
+    flex: 1;
+    margin-left: $spacing-md;
+
+    .cardName {
+      font-size: 30rpx;
+      font-weight: $font-weight-semibold;
+      color: $color-text-primary;
+      @include text-ellipsis;
+    }
+
+    .cardSeries {
+      font-size: 24rpx;
+      color: $color-text-tertiary;
+      margin-top: 4rpx;
+    }
+
+    .cardMeta {
+      display: flex;
+      gap: $spacing-sm;
+      margin-top: 8rpx;
+
+      .metaTag {
+        font-size: 20rpx;
+        padding: 2rpx 10rpx;
+        background: $color-bg-hover;
+        border-radius: $radius-xs;
+        color: $color-text-tertiary;
+      }
+    }
+  }
+
+  .cardPrice {
+    text-align: right;
+
+    .price {
+      font-size: 32rpx;
+      font-weight: $font-weight-bold;
+      color: $color-text-primary;
+    }
+
+    .change {
+      font-size: 24rpx;
+      margin-top: 4rpx;
+
+      &.up {
+        color: $color-price-up;
+      }
+
+      &.down {
+        color: $color-price-down;
+      }
+    }
+  }
+}
+
+// 空状态
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120rpx $page-padding;
+
+  .emptyIcon {
+    font-size: 120rpx;
+    margin-bottom: $spacing-lg;
+    opacity: 0.5;
+  }
+
+  .emptyText {
+    font-size: 28rpx;
+    color: $color-text-tertiary;
+    text-align: center;
+  }
+
+  .emptyHint {
+    font-size: 24rpx;
+    color: $color-text-disabled;
+    margin-top: $spacing-sm;
+    text-align: center;
+  }
+}
+
+// 热门搜索
+.hotSearch {
+  padding: $spacing-lg $page-padding;
+
+  .sectionTitle {
+    font-size: 30rpx;
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+    margin-bottom: $spacing-md;
+  }
+}
+
+.hotTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+}
+
+.hotTag {
+  padding: 12rpx 24rpx;
+  font-size: 26rpx;
+  color: $color-text-secondary;
+  background: $color-bg-card;
+  border-radius: $radius-button;
+  box-shadow: $shadow-card;
+  margin-bottom: $spacing-sm;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

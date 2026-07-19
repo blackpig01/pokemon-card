@@ -1,0 +1,129 @@
+.container {
+  min-height: 100vh;
+  background-color: #F0F0F5;
+}
+
+.searchBar {
+  display: flex;
+  padding: 16px;
+  gap: 10px;
+  background-color: #FFFFFF;
+}
+
+.searchInput {
+  flex: 1;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 22px;
+  background-color: #F7F8FA;
+  font-size: 14px;
+}
+
+.searchBtn {
+  width: 80px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFD93D;
+  color: #1A1A2E;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 22px;
+}
+
+.filterTabs {
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px;
+  background-color: #FFFFFF;
+  border-top: 1px solid #F0F0F5;
+}
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #86909C;
+  background-color: #F7F8FA;
+  
+  &.active {
+    background-color: #FFD93D;
+    color: #1A1A2E;
+    font-weight: bold;
+  }
+}
+
+.results {
+  padding: 16px;
+}
+
+.empty {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.emptyIcon {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.emptyText {
+  font-size: 18px;
+  color: #1A1A2E;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.emptyHint {
+  font-size: 14px;
+  color: #86909C;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardItem {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.cardName {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1A1A2E;
+  display: block;
+}
+
+.cardSeries {
+  font-size: 14px;
+  color: #86909C;
+  display: block;
+  margin-top: 4px;
+}
+
+.cardRarity {
+  font-size: 12px;
+  color: #FFD93D;
+  margin-top: 4px;
+}
+
+.cardPrice {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1A1A2E;
+  margin-top: 8px;
+  
+  &.up { color: #00B42A; }
+  &.down { color: #FF6B6B; }
+}
+
+.priceChange {
+  font-size: 14px;
+  margin-left: 8px;
+}

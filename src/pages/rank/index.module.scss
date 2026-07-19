@@ -1,0 +1,270 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFF9E6 0%, $color-bg-page 100%);
+  padding-bottom: 120rpx;
+}
+
+// 头部
+.header {
+  padding: $spacing-lg $page-padding;
+  background: linear-gradient(135deg, #FFD93D 0%, #FF9F1C 100%);
+
+  .title {
+    font-size: 40rpx;
+    font-weight: $font-weight-bold;
+    color: #1D2129;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 24rpx;
+    color: rgba(29, 33, 41, 0.6);
+    text-align: center;
+    margin-top: 8rpx;
+  }
+}
+
+// 快讯区域
+.flashSection {
+  padding: $spacing-md $page-padding;
+  background: $color-bg-card;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+  height: 280rpx;
+}
+
+.flashScroll {
+  height: 240rpx;
+}
+
+.flashItem {
+  padding: $spacing-sm $spacing-md;
+  margin-bottom: $spacing-sm;
+  background: $color-bg-hover;
+  border-radius: $radius-md;
+  border-left: 4rpx solid $color-text-tertiary;
+
+  &.hotFlash {
+    background: linear-gradient(135deg, rgba(255, 217, 61, 0.1), rgba(255, 159, 28, 0.1));
+    border-left: 4rpx solid #FF9F1C;
+  }
+}
+
+.flashHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 8rpx;
+}
+
+.flashIcon {
+  font-size: 28rpx;
+}
+
+.flashContent {
+  font-size: 26rpx;
+  color: $color-text-primary;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.flashMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8rpx;
+}
+
+.flashTime {
+  font-size: 22rpx;
+  color: $color-text-tertiary;
+}
+
+.flashSource {
+  font-size: 22rpx;
+  color: $color-text-tertiary;
+}
+
+// 分类导航
+.categoryNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  padding: $spacing-md $page-padding;
+  background: $color-bg-card;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+.categoryItem {
+  padding: 12rpx 24rpx;
+  font-size: 26rpx;
+  color: $color-text-secondary;
+  background: $color-bg-hover;
+  border-radius: $radius-button;
+  transition: all $transition-base;
+
+  &.active {
+    background: linear-gradient(135deg, #FFD93D 0%, #FF9F1C 100%);
+    color: #1D2129;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+// 热门资讯
+.hotSection {
+  padding: $spacing-md $page-padding;
+}
+
+.sectionHeader {
+  margin-bottom: $spacing-md;
+}
+
+.sectionTitle {
+  font-size: 32rpx;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.hotList {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.hotArticle {
+  flex: 1;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-card;
+}
+
+.hotCover {
+  width: 100%;
+  height: 180rpx;
+  background: linear-gradient(135deg, #FFF9E6, #FFE4E1);
+}
+
+.hotContent {
+  padding: $spacing-sm;
+}
+
+.hotTitle {
+  font-size: 26rpx;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  height: 70rpx;
+  line-height: 1.4;
+}
+
+.hotMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8rpx;
+}
+
+.hotReads {
+  font-size: 22rpx;
+  color: $color-text-tertiary;
+}
+
+.hotTime {
+  font-size: 22rpx;
+  color: $color-text-tertiary;
+}
+
+// 资讯列表
+.articleList {
+  padding: $spacing-md $page-padding;
+}
+
+.articleItem {
+  display: flex;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  gap: $spacing-md;
+}
+
+.articleCover {
+  width: 200rpx;
+  height: 150rpx;
+  border-radius: $radius-md;
+  background: linear-gradient(135deg, #FFF9E6, #FFE4E1);
+  flex-shrink: 0;
+}
+
+.articleContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.articleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rpx;
+}
+
+.articleCategory {
+  font-size: 22rpx;
+  color: #FF9F1C;
+  font-weight: $font-weight-medium;
+}
+
+.articleTime {
+  font-size: 22rpx;
+  color: $color-text-tertiary;
+}
+
+.articleTitle {
+  font-size: 30rpx;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  line-height: 1.4;
+  height: 84rpx;
+}
+
+.articleSummary {
+  font-size: 26rpx;
+  color: $color-text-secondary;
+  line-height: 1.4;
+  margin-top: 8rpx;
+}
+
+.articleTags {
+  display: flex;
+  gap: 8rpx;
+  margin-top: $spacing-sm;
+}
+
+.articleTag {
+  font-size: 20rpx;
+  padding: 4rpx 12rpx;
+  background: $color-bg-hover;
+  color: $color-text-tertiary;
+  border-radius: $radius-xs;
+}
+
+.articleMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $spacing-sm;
+}
+
+.authorName {
+  font-size: 24rpx;
+  color: $color-text-tertiary;
+}
+
+.articleStats {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.statItem {
+  font-size: 22rpx;
+  color: $color-text-tertiary;
+}

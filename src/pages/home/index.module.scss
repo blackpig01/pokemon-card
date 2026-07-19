@@ -1,0 +1,340 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFF9E6 0%, $color-bg-page 100%);
+  padding-bottom: 120rpx;
+}
+
+// 头部统计区域
+.header {
+  padding: $spacing-lg $page-padding;
+  background: linear-gradient(135deg, #FFD93D 0%, #FF9F1C 100%);
+
+  .title {
+    font-size: 40rpx;
+    font-weight: $font-weight-bold;
+    color: #1D2129;
+    margin-bottom: $spacing-md;
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-sm;
+  margin-top: $spacing-md;
+
+  .statItem {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: $radius-md;
+    padding: $spacing-md;
+    box-shadow: $shadow-card;
+
+    .statValue {
+      font-size: 36rpx;
+      font-weight: $font-weight-bold;
+      color: $color-text-primary;
+    }
+
+    .statLabel {
+      font-size: 24rpx;
+      color: $color-text-tertiary;
+      margin-top: 4rpx;
+    }
+
+    .statChange {
+      font-size: 22rpx;
+      margin-top: 8rpx;
+
+      &.up {
+        color: $color-price-up;
+      }
+
+      &.down {
+        color: $color-price-down;
+      }
+    }
+  }
+}
+
+// 快捷入口
+.quickActions {
+  display: flex;
+  gap: $spacing-md;
+  padding: $spacing-md $page-padding;
+  margin-top: -$spacing-xl;
+}
+
+.actionItem {
+  flex: 1;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: $spacing-md;
+  box-shadow: $shadow-card;
+  text-align: center;
+
+  .actionIcon {
+    font-size: 48rpx;
+    margin-bottom: 8rpx;
+  }
+
+  .actionText {
+    font-size: 24rpx;
+    color: $color-text-secondary;
+  }
+}
+
+// 热门卡牌区域
+.section {
+  padding: $spacing-lg $page-padding;
+
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-md;
+
+    .sectionTitle {
+      font-size: 34rpx;
+      font-weight: $font-weight-semibold;
+      color: $color-text-primary;
+    }
+
+    .moreBtn {
+      font-size: 24rpx;
+      color: $color-text-tertiary;
+      padding: 8rpx 16rpx;
+      background: $color-bg-hover;
+      border-radius: $radius-button;
+    }
+  }
+}
+
+// 热门卡牌列表
+.hotCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+}
+
+.hotCardItem {
+  width: calc(50% - #{$spacing-md / 2});
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-card;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  .cardImage {
+    width: 100%;
+    height: 280rpx;
+    background: linear-gradient(135deg, #FFF9E6, #FFE4E1);
+  }
+
+  .cardInfo {
+    padding: $spacing-md;
+
+    .cardName {
+      font-size: 28rpx;
+      font-weight: $font-weight-semibold;
+      color: $color-text-primary;
+      @include text-ellipsis;
+    }
+
+    .cardSeries {
+      font-size: 24rpx;
+      color: $color-text-tertiary;
+      margin-top: 4rpx;
+    }
+
+    .cardPrice {
+      display: flex;
+      align-items: baseline;
+      gap: 8rpx;
+      margin-top: $spacing-sm;
+
+      .price {
+        font-size: 32rpx;
+        font-weight: $font-weight-bold;
+        color: $color-price-down;
+      }
+
+      .change {
+        font-size: 22rpx;
+        padding: 2rpx 8rpx;
+        border-radius: $radius-xs;
+
+        &.up {
+          background: rgba(0, 180, 42, 0.1);
+          color: $color-price-up;
+        }
+
+        &.down {
+          background: rgba(245, 63, 63, 0.1);
+          color: $color-price-down;
+        }
+      }
+    }
+
+    .cardVolume {
+      font-size: 22rpx;
+      color: $color-text-tertiary;
+      margin-top: 8rpx;
+    }
+  }
+}
+
+// 趋势卡片
+.trendCard {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-card;
+
+  .trendHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-md;
+
+    .trendName {
+      font-size: 28rpx;
+      font-weight: $font-weight-semibold;
+      color: $color-text-primary;
+    }
+
+    .trendBadge {
+      font-size: 22rpx;
+      padding: 4rpx 12rpx;
+      border-radius: $radius-button;
+
+      &.up {
+        background: $color-price-up;
+        color: $color-text-white;
+      }
+
+      &.down {
+        background: $color-price-down;
+        color: $color-text-white;
+      }
+    }
+  }
+
+  .miniChart {
+    height: 120rpx;
+    background: linear-gradient(180deg, rgba(255, 217, 61, 0.1), transparent);
+    border-radius: $radius-sm;
+    margin-bottom: $spacing-sm;
+    position: relative;
+    overflow: hidden;
+
+    .chartLine {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80rpx;
+    }
+  }
+
+  .trendStats {
+    display: flex;
+    justify-content: space-between;
+
+    .trendStat {
+      text-align: center;
+
+      .trendStatValue {
+        font-size: 28rpx;
+        font-weight: $font-weight-semibold;
+        color: $color-text-primary;
+      }
+
+      .trendStatLabel {
+        font-size: 22rpx;
+        color: $color-text-tertiary;
+      }
+    }
+  }
+}
+
+// 涨幅榜/跌幅榜
+.gainerList {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-card;
+
+  .gainerItem {
+    display: flex;
+    align-items: center;
+    padding: $spacing-md;
+    border-bottom: 1rpx solid $color-divider;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .rank {
+      width: 48rpx;
+      font-size: 28rpx;
+      font-weight: $font-weight-bold;
+      color: $color-text-tertiary;
+
+      &.top {
+        color: $color-price-up;
+      }
+    }
+
+    .gainerImage {
+      width: 80rpx;
+      height: 100rpx;
+      border-radius: $radius-sm;
+      background: linear-gradient(135deg, #FFF9E6, #FFE4E1);
+      margin: 0 $spacing-md;
+    }
+
+    .gainerInfo {
+      flex: 1;
+
+      .gainerName {
+        font-size: 28rpx;
+        font-weight: $font-weight-medium;
+        color: $color-text-primary;
+      }
+
+      .gainerSeries {
+        font-size: 24rpx;
+        color: $color-text-tertiary;
+      }
+    }
+
+    .gainerPrice {
+      text-align: right;
+
+      .price {
+        font-size: 28rpx;
+        font-weight: $font-weight-bold;
+        color: $color-text-primary;
+      }
+
+      .change {
+        font-size: 22rpx;
+
+        &.up {
+          color: $color-price-up;
+        }
+
+        &.down {
+          color: $color-price-down;
+        }
+      }
+    }
+  }
+}

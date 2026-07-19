@@ -1,0 +1,78 @@
+.container {
+  min-height: 100vh;
+  background-color: #F0F0F5;
+}
+
+.header {
+  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+  padding: 30px 20px;
+  border-radius: 0 0 30px 30px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #FF4444;
+  display: block;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #86909C;
+  margin-top: 5px;
+}
+
+.comingSoon {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.icon {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1A1A2E;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.details {
+  font-size: 16px;
+  color: #86909C;
+}
+
+.features {
+  padding: 0 20px;
+}
+
+.feature {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.featureIcon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.featureTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1A1A2E;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.featureDesc {
+  font-size: 14px;
+  color: #86909C;
+  line-height: 1.5;
+}

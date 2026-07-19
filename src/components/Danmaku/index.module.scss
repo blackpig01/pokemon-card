@@ -1,0 +1,121 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-card;
+}
+
+.controlBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.title {
+  font-size: 28rpx;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.controls {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.toggleBtn {
+  padding: 8rpx 16rpx;
+  font-size: 28rpx;
+  background: $color-bg-hover;
+  border-radius: $radius-button;
+  
+  &.off {
+    opacity: 0.5;
+  }
+}
+
+.sendBtn {
+  padding: 8rpx 16rpx;
+  font-size: 24rpx;
+  color: $color-text-primary;
+  background: linear-gradient(135deg, #FFD93D 0%, #FF9F1C 100%);
+  border-radius: $radius-button;
+}
+
+.inputArea {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+  padding: $spacing-sm;
+  background: $color-bg-hover;
+  border-radius: $radius-md;
+}
+
+.input {
+  flex: 1;
+  height: 64rpx;
+  padding: 0 $spacing-md;
+  font-size: 26rpx;
+  background: #FFFFFF;
+  border-radius: $radius-button;
+}
+
+.sendConfirm {
+  width: 120rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: $font-weight-semibold;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #FF6B6B 0%, #F53F3F 100%);
+  border-radius: $radius-button;
+}
+
+.danmakuArea {
+  min-height: 120rpx;
+  padding: $spacing-md;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), transparent);
+  border-radius: $radius-md;
+}
+
+.danmakuItem {
+  display: inline-block;
+  max-width: 100%;
+  padding: 8rpx 16rpx;
+  margin-bottom: $spacing-sm;
+  font-size: 26rpx;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: $radius-button;
+  animation: fadeIn 0.3s ease;
+
+  .userName {
+    font-weight: $font-weight-semibold;
+  }
+
+  .content {
+    font-weight: $font-weight-medium;
+  }
+}
+
+.tips {
+  margin-top: $spacing-sm;
+  font-size: 22rpx;
+  color: $color-text-tertiary;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
